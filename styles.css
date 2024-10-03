@@ -136,15 +136,16 @@ footer {
     background-color: #2C3E50;
     color: #ECF0F1;
     padding: 40px 20px;
-    flex-shrink: 0; /* Ensure footer doesn't shrink */
 }
 
 .footer-content {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     flex-wrap: wrap;
     max-width: 1000px;
     margin: 0 auto;
+    text-align: left; /* Aligns text on larger screens */
 }
 
 .contact-info, .github-link {
@@ -171,6 +172,54 @@ footer {
 .footer-content a:hover {
     text-decoration: underline;
 }
+
+.github-button {
+    display: inline-flex;
+    align-items: center;
+    padding: 12px 25px;
+    background-color: #16A085; /* Darkened the button color */
+    color: #FFFFFF; /* Ensure the text is white */
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 500;
+    transition: background-color 0.3s, transform 0.3s;
+    font-size: 1em; /* Adjust font size for better visibility */
+}
+
+.github-button i {
+    margin-right: 10px;
+    font-size: 1.2em;
+}
+
+.github-button:hover {
+    background-color: #14807A;
+    transform: translateY(-2px);
+}
+
+.license-info {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9em; /* Smaller font for license text */
+    color: #BDC3C7; /* Lighter color for license text */
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center; /* Center text on smaller screens */
+    }
+
+    .github-button {
+        margin-top: 20px;
+    }
+
+    .license-info {
+        margin-top: 30px;
+        font-size: 0.8em;
+    }
+}
+
 
 .github-button {
     display: inline-flex;
@@ -206,15 +255,6 @@ footer {
 
     .header p {
         font-size: 1em;
-    }
-
-    .footer-content {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .github-button {
-        margin-top: 20px;
     }
 }
 
