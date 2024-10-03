@@ -23,26 +23,26 @@ body {
     flex-direction: column;
     min-height: 100vh;
     width: 100%;
-    height: 100%; /* Ensure container fills the entire window */
+    height: 100%;
 }
 
 /* Header Section */
 .header {
     background-color: #2C3E50;
     color: #ECF0F1;
-    padding: 60px 20px;
+    padding: 40px 20px; /* Adjusted to reduce height */
     text-align: center;
-    flex-shrink: 0; /* Ensure header doesn't shrink */
+    flex-shrink: 0;
 }
 
 .header h1 {
     font-family: 'Montserrat', sans-serif;
-    font-size: 2.5em;
-    margin-bottom: 20px;
+    font-size: 2.2em; /* Slightly reduced size */
+    margin-bottom: 10px;
 }
 
 .header p {
-    font-size: 1.1em;
+    font-size: 1em; /* Adjusted font size */
     max-width: 800px;
     margin: 0 auto;
     line-height: 1.6;
@@ -54,22 +54,21 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 40px 20px;
+    padding: 20px; /* Reduced padding for better fitting */
 }
 
 .tools-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
+    gap: 20px; /* Reduced gap */
     width: 100%;
     max-width: 1200px;
-    padding: 0 10px;
 }
 
 .tool-card {
     background-color: #FFFFFF;
     border-radius: 15px;
-    padding: 30px 20px;
+    padding: 20px; /* Adjusted padding */
     box-shadow: 0 8px 16px rgba(44, 62, 80, 0.1);
     text-align: center;
     transition: transform 0.3s, box-shadow 0.3s;
@@ -84,29 +83,28 @@ body {
 }
 
 .tool-icon {
-    font-size: 3em;
+    font-size: 2.8em; /* Slightly smaller icon */
     color: #1ABC9C;
     margin-bottom: 20px;
 }
 
 .tool-card h2 {
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.8em;
-    margin-bottom: 15px;
+    font-size: 1.6em;
+    margin-bottom: 10px;
     color: #2C3E50;
 }
 
 .tool-card p {
-    font-size: 1em;
-    margin-bottom: 25px;
+    font-size: 0.95em;
+    margin-bottom: 15px;
     color: #7F8C8D;
     line-height: 1.5;
-    flex-grow: 1;
 }
 
 .tool-button {
     display: inline-block;
-    padding: 12px 30px;
+    padding: 10px 20px;
     background-color: #1ABC9C;
     color: #FFFFFF;
     text-decoration: none;
@@ -135,7 +133,9 @@ body {
 footer {
     background-color: #2C3E50;
     color: #ECF0F1;
-    padding: 40px 20px;
+    padding: 20px; /* Reduced padding */
+    flex-shrink: 0;
+    text-align: center;
 }
 
 .footer-content {
@@ -145,7 +145,6 @@ footer {
     flex-wrap: wrap;
     max-width: 1000px;
     margin: 0 auto;
-    text-align: left; /* Aligns text on larger screens */
 }
 
 .contact-info, .github-link {
@@ -176,56 +175,8 @@ footer {
 .github-button {
     display: inline-flex;
     align-items: center;
-    padding: 12px 25px;
-    background-color: #16A085; /* Darkened the button color */
-    color: #FFFFFF; /* Ensure the text is white */
-    text-decoration: none;
-    border-radius: 30px;
-    font-weight: 500;
-    transition: background-color 0.3s, transform 0.3s;
-    font-size: 1em; /* Adjust font size for better visibility */
-}
-
-.github-button i {
-    margin-right: 10px;
-    font-size: 1.2em;
-}
-
-.github-button:hover {
-    background-color: #14807A;
-    transform: translateY(-2px);
-}
-
-.license-info {
-    text-align: center;
-    margin-top: 20px;
-    font-size: 0.9em; /* Smaller font for license text */
-    color: #BDC3C7; /* Lighter color for license text */
-}
-
-@media (max-width: 768px) {
-    .footer-content {
-        flex-direction: column;
-        align-items: center;
-        text-align: center; /* Center text on smaller screens */
-    }
-
-    .github-button {
-        margin-top: 20px;
-    }
-
-    .license-info {
-        margin-top: 30px;
-        font-size: 0.8em;
-    }
-}
-
-
-.github-button {
-    display: inline-flex;
-    align-items: center;
-    padding: 12px 25px;
-    background-color: #16A085; /* Darkened the button color for contrast */
+    padding: 10px 20px;
+    background-color: #16A085;
     color: #FFFFFF;
     text-decoration: none;
     border-radius: 30px;
@@ -243,18 +194,27 @@ footer {
     transform: translateY(-2px);
 }
 
-/* Responsive Design */
-@media (max-width: 992px) {
-    .header {
-        padding: 40px 15px;
+.license-info {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #BDC3C7;
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
 
-    .header h1 {
-        font-size: 2em;
+    .github-button {
+        margin-top: 20px;
     }
 
-    .header p {
-        font-size: 1em;
+    .license-info {
+        margin-top: 30px;
+        font-size: 0.8em;
     }
 }
 
@@ -264,7 +224,7 @@ footer {
     }
 
     .header p {
-        font-size: 0.95em;
+        font-size: 0.9em;
     }
 
     .tools-container {
@@ -272,7 +232,7 @@ footer {
     }
 
     .tool-card {
-        padding: 25px 15px;
+        padding: 20px;
     }
 
     .tool-icon {
@@ -280,7 +240,7 @@ footer {
     }
 
     .tool-card h2 {
-        font-size: 1.5em;
+        font-size: 1.4em;
     }
 
     .tool-card p {
@@ -288,7 +248,7 @@ footer {
     }
 
     .tool-button {
-        padding: 10px 25px;
+        padding: 10px 20px;
         font-size: 0.9em;
     }
 
